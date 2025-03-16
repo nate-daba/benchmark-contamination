@@ -8,6 +8,7 @@ __pycache__/
 
 # modules
 .gitmodules
+.gitignore
 
 # log files
 checkpoints/
