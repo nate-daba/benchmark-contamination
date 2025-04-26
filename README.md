@@ -1,5 +1,12 @@
 # benchmark-contamination
-Analysis of benchmark contamination in open-source LLMs, evaluating reasoning performance on AIME-2024 & MMLU while implementing contamination detection techniques.
+
+Analysis of benchmark contamination in open-source LLMs, evaluating reasoning performance on AIME-2024 & MMLU while implementing contamination detection techniques. Please see the report [here](./report/report.pdf) for more details on the analysis and findings.
+
+This project extends [Open R1](https://github.com/huggingface/open-r1) by Hugging Face, which provides local serving and evaluation of the DeepSeek-R1 models. In addition to reproducing their setup, we modify and build upon it to support serving and evaluating other open-source LLMs such as Qwen and Llama models. We also implement a contamination detection script to identify potential contamination in the models.
+
+## Setup
+Please follow the instructions in the [Open R1 repository](https://github.com/huggingface/open-r1) to set up the environment. 
+
 
 ## Evaluation Script Usage
 
@@ -12,7 +19,7 @@ Run the evaluation script with various options to test different models and task
 # Evaluate DeepSeek-R1-Distill-Qwen-14B on aime24 with 4 GPUs
 ./eval.sh --model=deepseek-ai/DeepSeek-R1-Distill-Qwen-7B --task=aime24 --devices=0,1,2,3
 
-# Evaluate Qwen2.5-Math-7B on MMLU with 2 GPUs (note the max-model-length for Qwen models)
+# Evaluate Qwen2.5-Math-7B-Instruct on MMLU with 2 GPUs (note the max-model-length for Qwen models)
 ./eval.sh --model=Qwen/Qwen2.5-Math-7B-Instruct --task=mmlu:high_school_mathematics --devices=0,1 --max-model-length=4096 --temp=1.0 --top-p=0.9
 ```
 
