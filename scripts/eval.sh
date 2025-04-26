@@ -7,7 +7,7 @@ DEVICE_IDS="0"
 MAX_SAMPLES=""
 MAX_MODEL_LENGTH="32768"  # 32768 (DeepSeek-R1) or 4096 (Qwen)
 TEMP="0.6" # 0.6 (DeepSeek-R1) or 1.0 (Qwen)
-TOP_P="0.95" # 0.95 (DeepSeek-R1) or 0.9 (Qwen)
+TOP_P="0.8" # 0.95 (DeepSeek-R1) or 0.9 (Qwen)
 # Add cleanup function for graceful termination
 cleanup_gpu_processes() {
   echo "Cleaning up GPU processes for devices: $DEVICE_IDS"
